@@ -1,0 +1,96 @@
+Arguments: 
+  /usr/local/Cellar/node/12.5.0/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js publish
+
+PATH: 
+  /Users/nemanjagajic/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/nemanjagajic/Library/Android/sdk/emulator:/Users/nemanjagajic/Library/Android/sdk/tools:/Users/nemanjagajic/Library/Android/sdk/tools/bin:/Users/nemanjagajic/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  12.5.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:125850:13)
+      at Interface.emit (events.js:200:13)
+      at Interface._ttyWrite (readline.js:877:16)
+      at ReadStream.onkeypress (readline.js:189:10)
+      at ReadStream.emit (events.js:200:13)
+      at emitKeys (internal/readline.js:424:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1145:36)
+      at ReadStream.emit (events.js:200:13)
+      at addChunk (_stream_readable.js:294:12)
+
+npm manifest: 
+  {
+    "name": "vue-json-to-csv-async",
+    "version": "1.0.1",
+    "description": "A Vue.js 2 component to transform and download a json in csv format. It also accepts promises as value.",
+    "main": "dist/vue-json-to-csv.js",
+    "scripts": {
+      "build": "rimraf ./dist && webpack --config ./webpack.config.js",
+      "test": "jest"
+    },
+    "author": "Nemanja Gajic",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/nemanjagajic/vue-json-to-csv"
+    },
+    "devDependencies": {
+      "@vue/test-utils": "^1.0.0-beta.16",
+      "babel-core": "^6.10.4",
+      "babel-eslint": "^8.2.6",
+      "babel-loader": "^6.2.4",
+      "babel-plugin-transform-runtime": "^6.9.0",
+      "babel-preset-es2015": "^6.9.0",
+      "babel-preset-stage-2": "^6.11.0",
+      "babel-runtime": "^6.9.2",
+      "eslint": "^5.1.0",
+      "eslint-config-standard": "^12.0.0-alpha.0",
+      "eslint-friendly-formatter": "^4.0.1",
+      "eslint-loader": "^2.0.0",
+      "eslint-plugin-html": "^4.0.5",
+      "eslint-plugin-import": "^2.13.0",
+      "eslint-plugin-node": "^6.0.1",
+      "eslint-plugin-promise": "^3.8.0",
+      "eslint-plugin-standard": "^3.1.0",
+      "jest": "^21.2.1",
+      "jest-serializer-vue": "^0.2.0",
+      "rimraf": "^2.6.1",
+      "vue": "^2.2.1",
+      "vue-html-loader": "^1.2.3",
+      "vue-jest": "^1.0.0",
+      "vue-loader": "^11.1.4",
+      "vue-style-loader": "^2.0.3",
+      "vue-template-compiler": "^2.2.1",
+      "webpack": "1.13.1",
+      "webpack-merge": "^4.1.0"
+    },
+    "jest": {
+      "collectCoverage": true,
+      "moduleFileExtensions": [
+        "js",
+        "vue"
+      ],
+      "moduleNameMapper": {
+        "@/([^\\.]*).vue$": "<rootDir>/$1.vue",
+        "@/([^\\.]*)$": "<rootDir>/$1.js"
+      },
+      "transform": {
+        "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+        ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

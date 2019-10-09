@@ -1,17 +1,17 @@
 {
-  "name": "vue-json-to-csv",
-  "version": "1.1.8",
-  "description": "A Vue.js 2 component to transform and download a json in csv format",
+  "name": "vue-json-to-csv-async",
+  "version": "1.0.1",
+  "description": "A Vue.js 2 component to transform and download a json in csv format. It also accepts promises as value.",
   "main": "dist/vue-json-to-csv.js",
   "scripts": {
     "build": "rimraf ./dist && webpack --config ./webpack.config.js",
     "test": "jest"
   },
-  "author": "Angeliki Komianou",
+  "author": "Nemanja Gajic",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angeliquekom/vue-json-to-csv"
+    "url": "https://github.com/nemanjagajic/vue-json-to-csv"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.16",

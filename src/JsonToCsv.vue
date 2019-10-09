@@ -16,7 +16,11 @@ export default {
   props: {
     jsonData: {
       type: Array,
-      required: true
+      required: false
+    },
+    jsonDataGenerator: {
+      type: Function,
+      required: false
     },
     csvTitle: {
       type: [String, Number],
@@ -47,10 +51,17 @@ export default {
     this.csvData = null
   },
   methods: {
-    handleClick () {
+    async handleClick () {
       let hasErrorEvent = (Object.keys(this._events).indexOf('error') > -1)
       let hasSuccessEvent = (Object.keys(this._events).indexOf('success') > -1)
-      if (!this.jsonData.length) {
+
+      let receivedJsonData = this.jsonData
+
+      if (typeof this.jsonDataGenerator === 'function') {
+        receivedJsonData = await this.jsonDataGenerator()
+      }
+
+      if (!receivedJsonData.length) {
         this.handleError(`Error: Data are empty`, hasErrorEvent)
         return
       }
@@ -60,12 +71,12 @@ export default {
         return
       }
 
-      let labels = Object.getOwnPropertyNames({ ...this.jsonData[0] })
+      let labels = Object.getOwnPropertyNames({ ...receivedJsonData[0] })
 
       let labelsConf = this.labels || this.$_createCsvLabelsConf(labels)
 
       this.csvLabels = this.showLabels ? this.$_createCsvLabels(labelsConf, this.separator) : ''
-      this.csvData = this.$_createCsvContent(this.jsonData, labelsConf, this.separator)
+      this.csvData = this.$_createCsvContent(receivedJsonData, labelsConf, this.separator)
 
       if (this.csvLabels === 'error' || this.csvData === 'error') {
         this.handleError(`Error: An error occured while parsing the data.`, hasErrorEvent)
