@@ -1,10 +1,10 @@
-# vue-json-to-csv
+# vue-json-to-csv-async
 
 A Vue.js 2 component to transform and download a json in csv format [https://github.com/nemanjagajic/vue-json-to-csv](https://github.com/nemanjagajic/vue-json-to-csv)
 
 ## Installation
 
-`npm install --save vue-json-to-csv` or use `dist/vue-json-to-csv.min.js`
+`npm install --save vue-json-to-csv-async` or `yarn add vue-json-to-csv-async`
 
 
 ## Usage
@@ -12,7 +12,13 @@ A Vue.js 2 component to transform and download a json in csv format [https://git
 For vue-cli user:
 
 ```javascript
-import VueJsonToCsv from 'vue-json-to-csv'
+import VueJsonToCsv from 'vue-json-to-csv-async'
+```
+
+If you just want to use component
+
+```javascript
+import VueJsonToCsv from 'vue-json-to-csv-async/src/JsonToCsv'
 ```
 
 For standalone usage:
