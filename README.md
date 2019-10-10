@@ -44,7 +44,7 @@ Simple usage: will generate a default button. The csv will include all the label
 </vue-json-to-csv>
 ```
 
-If you want, you can pass a promise which will resolve array instead of just passing plain array
+If you want, you can pass async function which will return an array instead of just passing plain array
 
 ```html
 <vue-json-to-csv :json-data-generator="getItemsToExport">
