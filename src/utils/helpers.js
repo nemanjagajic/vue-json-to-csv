@@ -57,12 +57,12 @@ module.exports = {
     },
     $_downloadCsv (uid, csv, title) {
       try {
-        let uri = 'data:text/csv;charset=utf-8,' + '\uFEFF' + encodeURIComponent(csv)
-
+        let csvData = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+        let csvUrl = URL.createObjectURL(csvData);
         let link = document.createElement('a')
 
         link.id = 'csv-' + uid
-        link.href = uri
+        link.href = csvUrl
 
         document.body.appendChild(link)
 
