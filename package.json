@@ -1,6 +1,6 @@
 {
   "name": "vue-json-to-csv-async",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Vue.js 2 component to transform and download a json in csv format. It also accepts promises as value.",
   "main": "dist/vue-json-to-csv.js",
   "scripts": {
