@@ -1,14 +1,11 @@
 # vue-json-to-csv
 
-A Vue.js 2 component to transform and download a json in csv format [https://angeliquekom.github.io/vue-json-to-csv.github.io/](https://angeliquekom.github.io/vue-json-to-csv.github.io/)
+A Vue.js 2 component to transform and download a json in csv format [https://github.com/nemanjagajic/vue-json-to-csv](https://github.com/nemanjagajic/vue-json-to-csv)
 
 ## Installation
 
 `npm install --save vue-json-to-csv` or use `dist/vue-json-to-csv.min.js`
 
-## Demo
-
-[Demo](https://angeliquekom.github.io/vue-json-to-csv.github.io/)
 
 ## Usage
 
@@ -40,6 +37,14 @@ Simple usage: will generate a default button. The csv will include all the label
   ]">
 </vue-json-to-csv>
 ```
+
+If you want, you can pass a promise which will resolve array instead of just passing plain array
+
+```html
+<vue-json-to-csv :json-data-generator="getItemsToExport">
+</vue-json-to-csv>
+```
+
 #### Result csv
 
 csv.csv
